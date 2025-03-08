@@ -40,12 +40,13 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://w
 
 // Firebase Config (Replace with your details)
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyA3Nh0HKR5sqEadbAsiFMXXcS-nzGg2E28",
+    authDomain: "ai-learning-assistant-b0ae5.firebaseapp.com",
+    projectId: "ai-learning-assistant-b0ae5",
+    storageBucket: "ai-learning-assistant-b0ae5.firebasestorage.app",
+    messagingSenderId: "638966508282",
+    appId: "1:638966508282:web:b023057d01a52c098df743",
+    measurementId: "G-KR0GFF1YM0"
 };
 
 // Initialize Firebase
@@ -58,6 +59,7 @@ function signIn() {
         document.getElementById("user-info").innerText = `Hello, ${result.user.displayName}`;
         document.getElementById("login-btn").style.display = "none";
         document.getElementById("logout-btn").style.display = "block";
+        window.location.href = "index.html";
     }).catch(error => console.log(error));
 }
 
@@ -66,5 +68,6 @@ function signOutUser() {
         document.getElementById("user-info").innerText = "";
         document.getElementById("login-btn").style.display = "block";
         document.getElementById("logout-btn").style.display = "none";
+        window.location.href = "login.html";
     }).catch(error => console.log(error));
 }
