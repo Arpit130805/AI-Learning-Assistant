@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI-Powered Personalized Learning Assistant</h1>
+    </header>
+    
+    <nav>
+        <button onclick="setMode('visual')">Visual</button>
+        <button onclick="setMode('auditory')">Auditory</button>
+        <button onclick="setMode('kinesthetic')">Kinesthetic</button>
+        <button onclick="generateSummary()">AI Summary</button>
+        <button id="login-btn" onclick="signIn()">🔑 Login with Google</button>
+        <button id="logout-btn" onclick="signOut()" style="display:none;">🚪 Logout</button>
+    </nav>
+    <p id="user-info"></p>
+
+    <section id="content">
+        <h2>Lesson Content</h2>
+        <div id="lesson-area">
+            <p>Select a learning style to start.</p>
+        </div>
+    </section>
+
+    <section id="speech">
+        <h2>Voice Input</h2>
+        <button onclick="startListening()">🎙️ Speak</button>
+        <p id="speech-text">(Your spoken words will appear here)</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
