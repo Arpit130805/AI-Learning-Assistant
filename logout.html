@@ -8,40 +8,9 @@
 </head>
 <body>
     <header>
-        <h1>Logout from AI Learning Assistant</h1>
+        <h1>Logged Out</h1>
     </header>
-    <section id="logout-section">
-        <button id="logout-btn" onclick="signOutUser()">🚪 Logout</button>
-    </section>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-        import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
-    
-        const firebaseConfig = {
-            apiKey: "AIzaSyA3Nh0HKR5sqEadbAsiFMXXcS-nzGg2E28",
-            authDomain: "ai-learning-assistant-b0ae5.firebaseapp.com",
-            projectId: "ai-learning-assistant-b0ae5",
-            storageBucket: "ai-learning-assistant-b0ae5.appspot.com",
-            messagingSenderId: "638966508282",
-            appId: "1:638966508282:web:b023057d01a52c098df743",
-            measurementId: "G-KR0GFF1YM0"
-        };
-    
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const provider = new GoogleAuthProvider();
-    
-        window.signOutUser = function () {
-            signOut(auth)
-                .then(() => {
-                    console.log("User signed out.");
-                    localStorage.removeItem("user"); // Remove user info
-                    window.location.href = "login.html"; // Redirect to login page after logout
-                })
-                .catch((error) => {
-                    console.error("Logout Error:", error);
-                });
-        };
-    </script>
-    </body>
+    <p>You have been logged out.</p>
+    <a href="login.html"><button>🔑 Login Again</button></a>
+</body>
 </html>

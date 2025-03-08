@@ -13,35 +13,6 @@
     <section id="login-section">
         <button id="login-btn" onclick="signIn()">🔑 Login with Google</button>
     </section>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-        import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
-    
-        const firebaseConfig = {
-            apiKey: "AIzaSyA3Nh0HKR5sqEadbAsiFMXXcS-nzGg2E28",
-            authDomain: "ai-learning-assistant-b0ae5.firebaseapp.com",
-            projectId: "ai-learning-assistant-b0ae5",
-            storageBucket: "ai-learning-assistant-b0ae5.appspot.com",
-            messagingSenderId: "638966508282",
-            appId: "1:638966508282:web:b023057d01a52c098df743",
-            measurementId: "G-KR0GFF1YM0"
-        };
-    
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const provider = new GoogleAuthProvider();
-    
-        window.signIn = function () {
-            signInWithPopup(auth, provider)
-                .then((result) => {
-                    console.log("Login successful:", result.user);
-                    window.location.href = "index.html";
-                })
-                .catch((error) => {
-                    console.error("Login Error:", error);
-                });
-        };
-    </script>
-    
+    <script type="module" src="script.js"></script>
 </body>
 </html>
