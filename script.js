@@ -71,3 +71,17 @@ function signOutUser() {
         window.location.href = "login.html";
     }).catch(error => console.log(error));
 }
+
+// Check authentication state on page load
+auth.onAuthStateChanged(user => {
+    if (user) {
+        document.getElementById("user-info").innerText = `Hello, ${user.displayName}`;
+        document.getElementById("login-btn").style.display = "none";
+        document.getElementById("logout-btn").style.display = "block";
+    } else {
+        document.getElementById("user-info").innerText = "";
+        document.getElementById("login-btn").style.display = "block";
+        document.getElementById("logout-btn").style.display = "none";
+    }
+});
+g
