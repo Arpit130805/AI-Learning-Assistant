@@ -84,4 +84,3 @@ auth.onAuthStateChanged(user => {
         document.getElementById("logout-btn").style.display = "none";
     }
 });
-g
